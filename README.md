@@ -64,7 +64,8 @@ The project consists of two main components:
 │  [Previous]    [Next]       │
 └─────────────────────────────┘
 
-🧰 Hardware
+
+# 🧰 Hardware
 Required
 - LILYGO / TTGO T-Display V1.1
 - Computer running the Python Spotify bridge
