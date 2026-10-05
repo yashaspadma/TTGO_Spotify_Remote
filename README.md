@@ -31,7 +31,7 @@ The TTGO displays the current song, artist, album artwork, and playback progress
 
 The project consists of two main components:
 
-```text
+
 ┌──────────────────────┐
 │       Spotify       │
 │                      │
@@ -63,9 +63,9 @@ The project consists of two main components:
 │                             │
 │  [Previous]    [Next]       │
 └─────────────────────────────┘
+#```text
 
-
-# 🧰 Hardware
+ 🧰 Hardware
 Required
 - LILYGO / TTGO T-Display V1.1
 - Computer running the Python Spotify bridge
@@ -116,6 +116,7 @@ Install Pillow:
 pip install Pillow
 
 The bridge otherwise uses Python's standard library for HTTP and JSON handling.
+
 📁 Project Structure
 A recommended repository structure is:
 TTGO-Spotify-Remote/
