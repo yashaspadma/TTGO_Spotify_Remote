@@ -31,7 +31,7 @@ The TTGO displays the current song, artist, album artwork, and playback progress
 
 The project consists of two main components:
 
-
+```text
 ┌──────────────────────┐
 │       Spotify       │
 │                      │
@@ -63,7 +63,7 @@ The project consists of two main components:
 │                             │
 │  [Previous]    [Next]       │
 └─────────────────────────────┘
-#```text
+```
 
  🧰 Hardware
 Required
@@ -254,6 +254,8 @@ The bridge downloads the current Spotify artwork and resizes it before sending i
 Spotify album artwork can be relatively large.
 Sending the original artwork directly to the ESP32 can cause memory problems.
 For example:
+
+```text
 Spotify artwork
       │
       │ 640 × 640
@@ -267,6 +269,7 @@ Python Bridge
       │
       ▼
 ESP32
+```
 
 This dramatically reduces the amount of memory required by the ESP32.
 The bridge uses Pillow to resize the image:
@@ -283,6 +286,8 @@ The firmware uses:
 tft.setRotation(0);
 
 The display contains:
+
+```text
 ┌───────────────────┐
 │                   │
 │   ┌─────────────┐ │
@@ -299,6 +304,7 @@ The display contains:
 │ ━━━━━━━━━━━━━━━   │
 │                   │
 └───────────────────┘
+```
 
 The physical buttons are used for track control and are not displayed as on-screen buttons.
 🎛️ Button Configuration
