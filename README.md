@@ -119,6 +119,8 @@ The bridge otherwise uses Python's standard library for HTTP and JSON handling.
 
 📁 Project Structure
 A recommended repository structure is:
+
+```text
 TTGO-Spotify-Remote/
 │
 ├── README.md
@@ -134,6 +136,7 @@ TTGO-Spotify-Remote/
 │   └── ...
 │
 └── .gitignore
+```
 
 🔑 Spotify Developer Setup
 The project uses the Spotify Web API.
@@ -202,7 +205,7 @@ IPv4 Address. . . . . . : 192.168.1.11
 
 🐍 Running the Spotify Bridge
 Navigate to the Python directory:
-cd Python
+example " cd C:\...\...\...\...\TTGO_Spotify> "
 
 Run:
 python spotify_bridge.py
@@ -322,6 +325,8 @@ GPIO 0 is configured with the ESP32's internal pull-up.
 GPIO 35 does not have an internal pull-up on the ESP32, so its electrical behavior depends on the T-Display's existing button circuitry.
 🔄 How It Works
 When the ESP32 starts:
+
+```
 1. ESP32 powers on
        ↓
 2. Connects to Wi-Fi
@@ -341,10 +346,12 @@ When the ESP32 starts:
 9. Python resizes artwork to 120×120
        ↓
 10. ESP32 displays artwork
+```
 
 The ESP32 periodically requests the currently playing information.
 ⏭️ Changing Tracks
 When the Next button is pressed:
+```
 TTGO GPIO 0
       ↓
 ESP32
@@ -369,6 +376,7 @@ Python Bridge
 Spotify Web API
       ↓
 Previous Track
+```
 
 🔄 Spotify Token Refresh
 Spotify access tokens expire.
@@ -377,6 +385,7 @@ The bridge detects an expired token when Spotify returns:
 401 Unauthorized
 
 It then:
+```
 Expired access token
         ↓
 Refresh token
@@ -386,6 +395,8 @@ Spotify token endpoint
 New access token
         ↓
 Retry original request
+
+```
 
 This allows the bridge to continue working without requiring manual authentication every time the access token expires.
 🛠️ Arduino IDE Setup
